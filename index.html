@@ -5,118 +5,256 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Get More Google Reviews & Grow Your Business</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fafafa;
-      margin: 0; padding: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 3em;
-      line-height: 1.1;
-    }
-    header p {
-      font-size: 1.5em;
-      margin: 0;
-      font-weight: 600;
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px 50px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #004aad;
-      margin-bottom: 20px;
-      font-size: 2em;
-      border-bottom: 3px solid #004aad;
-      padding-bottom: 8px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    ul {
-      margin-left: 20px;
-      list-style-type: square;
-    }
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1.15em;
-    }
-    .price {
-      font-size: 2em;
-      font-weight: 700;
-      color: #28a745;
-      text-align: center;
-      margin: 30px 0;
-      background: #d4edda;
-      border: 2px solid #28a745;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 3px 6px rgba(40,167,69,0.3);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      font-weight: 600;
-      margin-bottom: 8px;
-      margin-top: 20px;
-    }
-    input, textarea {
-      padding: 12px;
-      font-size: 1em;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      transition: border-color 0.3s ease;
-    }
-    input:focus, textarea:focus {
-      border-color: #004aad;
-      outline: none;
-    }
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-    button {
-      margin-top: 30px;
-      padding: 15px;
-      font-size: 1.2em;
-      background-color: #004aad;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #002f6c;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 10px;
-      color: #666;
-      font-size: 0.9em;
-      margin-top: 50px;
-    }
-  </style>
+   /* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #222;
+  line-height: 1.7;
+  font-size: 1.125rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: #0056d2;
+  color: white;
+  padding: 70px 20px 50px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 86, 210, 0.3);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  line-height: 1.1;
+}
+
+header p {
+  font-size: 1.7rem;
+  font-weight: 600;
+  opacity: 0.9;
+  letter-spacing: 0.04em;
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  margin: 50px auto 80px;
+  background: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Section styles */
+section {
+  margin-bottom: 50px;
+  scroll-margin-top: 100px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #0056d2;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #0056d2;
+  padding-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  color: #444;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+ul li {
+  font-size: 1.18rem;
+  margin-bottom: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Price box */
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #28a745;
+  text-align: center;
+  margin: 40px 0 60px;
+  background: #d9f3db;
+  border: 3px solid #28a745;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 6px 14px rgba(40,167,69,0.35);
+  letter-spacing: 0.06em;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+.price:hover {
+  transform: scale(1.05);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  margin-top: 28px;
+  color: #0056d2;
+  letter-spacing: 0.02em;
+}
+
+input, textarea {
+  padding: 15px 18px;
+  font-size: 1.05rem;
+  border: 2.5px solid #ccc;
+  border-radius: 12px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border-color: #0056d2;
+  box-shadow: 0 0 10px rgba(0, 86, 210, 0.35);
+  outline: none;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 18px 0;
+  font-size: 1.3rem;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(0, 86, 210, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #003a9d;
+  box-shadow: 0 7px 25px rgba(0, 58, 157, 0.6);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 1rem;
+  color: #555;
+  margin-top: auto;
+  background: #f3f6f9;
+  letter-spacing: 0.03em;
+  user-select: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Divider styling */
+.divider {
+  margin: 60px 0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.6em;
+  color: #0056d2;
+  letter-spacing: 1.2px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divider span {
+  background: #0056d2;
+  color: white;
+  padding: 8px 35px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 86, 210, 0.4);
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: linear-gradient(90deg, #0056d2, #28a745, #0056d2);
+  opacity: 0.4;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  main {
+    margin: 40px 20px 70px;
+    padding: 35px 30px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+
+ </style>
 </head>
 <body>
 
@@ -126,7 +264,33 @@
 </header>
 
 <main>
+<section>
+  <h2>Simple Website Design Service</h2>
+  <p>Having a professional website helps your business reach more customers, showcase your products or services, and build credibility online.</p>
+  <p>For just <strong>$75/month</strong>, we create a clean, mobile-friendly website tailored to your small business needs. This service includes:</p>
+  <ul>
+    <li>Custom-designed website that looks great on any device.</li>
+    <li>No long-term contracts – cancel anytime.</li>
+  </ul>
+  <p>Get online quickly and start attracting customers with a website that works for you.</p>
+</section>
+<main>
+  <!-- First service section -->
   <section>
+    <!-- Your first service content here -->
+  </section>
+
+  <!-- Second service section -->
+  <section>
+    <!-- Your second service content here -->
+  </section>
+</main>
+ <div class="divider">
+  <hr />
+  <h3>Also Offering</h3>
+  <hr />
+</div>
+ <section>
     <h2>Why Are Google Reviews So Important?</h2>
     <p>In today’s digital age, your online reputation can make or break your business. Google reviews are one of the first things potential customers see when searching for services like yours. A strong portfolio of positive reviews:</p>
     <ul>
